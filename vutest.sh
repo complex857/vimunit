@@ -64,7 +64,7 @@ else
   help
 fi
 
-returncode=$?[]
+returncode=$?
 
 if [ $TOSTDOUT -eq 1 ]; then
   cat $FILE
