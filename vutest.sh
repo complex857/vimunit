@@ -56,9 +56,9 @@ fi
 
 shift $((OPTIND-1))
 
-if [[ $# -eq 1 ]]; then
+if [ $# -eq 1 ]; then
   $VIM -nc ":so % | let g:vimUnitVerbosity=$VERBOSE | call VURunAllTests('.*',1,'$FILE')" $1
-elif [[ $# -eq 2 ]]; then
+elif [ $# -eq 2 ]; then
   $VIM -nc ":so % | let g:vimUnitVerbosity=$VERBOSE | call VURunAllTests('$2',1,'$FILE')" $1
 else
   help
@@ -66,7 +66,7 @@ fi
 
 returncode=$?
 
-if [[ $TOSTDOUT -eq 1 ]]; then
+if [ $TOSTDOUT -eq 1 ]; then
   cat $FILE
 fi
 
