@@ -50,7 +50,7 @@ while getopts "vf:e:" opt; do
   esac
 done
 
-if [[ $# -lt 1 ]]; then
+if [ $# -lt 1 ]; then
   help
 fi
 
@@ -64,7 +64,7 @@ else
   help
 fi
 
-returncode=$?
+returncode=$?[]
 
 if [ $TOSTDOUT -eq 1 ]; then
   cat $FILE
